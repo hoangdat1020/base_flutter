@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter_application_flavor/presentation/resources/color_manager.dart';
+import 'package:flutter_application_flavor/presentation/resources/font_manager.dart';
 import 'package:flutter_application_flavor/presentation/resources/strings_manager.dart';
+import 'package:flutter_application_flavor/presentation/resources/styles_manager.dart';
 
 class MyApp extends StatefulWidget {
   MyApp._internal();
@@ -20,7 +23,7 @@ class _MyAppState extends State<MyApp> {
       supportedLocales: context.supportedLocales,
       locale: context.locale,
       debugShowCheckedModeBanner: false,
-      home: MainScreen(),
+      home: const MainScreen(),
     );
   }
 }
@@ -42,6 +45,11 @@ class _MainScreenState extends State<MainScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(AppStrings.hello.tr()),
+            Text(
+              AppStrings.hello.tr(),
+              style: getMediumStyle(
+                  color: ColorManager.black, fontSize: FontSize.s20),
+            ),
           ],
         ),
       ),
