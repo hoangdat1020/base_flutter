@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
-import 'package:flutter_application_flavor/presentation/resources/color_manager.dart';
-import 'package:flutter_application_flavor/presentation/resources/font_manager.dart';
-import 'package:flutter_application_flavor/presentation/resources/strings_manager.dart';
-import 'package:flutter_application_flavor/presentation/resources/styles_manager.dart';
+import 'package:flutter_application_flavor/feature/resources/color_manager.dart';
+import 'package:flutter_application_flavor/feature/resources/font_manager.dart';
+import 'package:flutter_application_flavor/feature/resources/strings_manager.dart';
+import 'package:flutter_application_flavor/feature/resources/styles_manager.dart';
 
 class MyApp extends StatefulWidget {
   MyApp._internal();

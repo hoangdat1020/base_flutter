@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_flavor/app/app.dart';
-import 'package:flutter_application_flavor/presentation/resources/language_manager.dart';
+import 'package:flutter_application_flavor/feature/resources/language_manager.dart';
 import 'package:flutter_config/flutter_config.dart';
 import 'package:easy_localization/easy_localization.dart';
 
