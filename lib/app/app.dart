@@ -30,31 +30,31 @@ class _MyAppState extends State<MyApp> {
   }
 }
 
-class MainScreen extends StatefulWidget {
-  const MainScreen({Key? key}) : super(key: key);
+// class MainScreen extends StatefulWidget {
+//   const MainScreen({Key? key}) : super(key: key);
 
-  @override
-  _MainScreenState createState() => _MainScreenState();
-}
+//   @override
+//   _MainScreenState createState() => _MainScreenState();
+// }
 
-class _MainScreenState extends State<MainScreen> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(AppStrings.hello.tr()),
-            Text(
-              AppStrings.hello.tr(),
-              style: getMediumStyle(
-                  color: ColorManager.black, fontSize: FontSize.s20),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
+// class _MainScreenState extends State<MainScreen> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       body: Center(
+//         child: Column(
+//           crossAxisAlignment: CrossAxisAlignment.center,
+//           mainAxisAlignment: MainAxisAlignment.center,
+//           children: [
+//             Text(AppStrings.hello.tr()),
+//             Text(
+//               AppStrings.hello.tr(),
+//               style: getMediumStyle(
+//                   color: ColorManager.black, fontSize: FontSize.s20),
+//             ),
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }

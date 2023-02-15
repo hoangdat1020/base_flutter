@@ -1,4 +1,7 @@
 {
-  "hello": "こんにちは!"
-  
+  "hello": "こんにちは!",
+  "home": "home",
+  "notification": "notification",
+  "search": "search",
+  "setting": "setting"
 }
