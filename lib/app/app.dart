@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_application_flavor/feature/resources/color_manager.dart';
 import 'package:flutter_application_flavor/feature/resources/font_manager.dart';
+import 'package:flutter_application_flavor/feature/resources/routes_manager.dart';
 import 'package:flutter_application_flavor/feature/resources/strings_manager.dart';
 import 'package:flutter_application_flavor/feature/resources/styles_manager.dart';
 
@@ -23,7 +24,8 @@ class _MyAppState extends State<MyApp> {
       supportedLocales: context.supportedLocales,
       locale: context.locale,
       debugShowCheckedModeBanner: false,
-      home: const MainScreen(),
+      onGenerateRoute: RouteGenerator.getRoute,
+      initialRoute: Routes.splashRoute,
     );
   }
 }
