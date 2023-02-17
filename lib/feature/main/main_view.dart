@@ -34,33 +34,45 @@ class _MainViewState extends State<MainView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          _title,
-        ),
-      ),
+      appBar: _currentIndex == 0
+          ? null
+          : AppBar(
+              title: Text(
+                _title,
+              ),
+            ),
       body: pages[_currentIndex],
-      bottomNavigationBar: Container(
-        decoration: BoxDecoration(boxShadow: [
-          BoxShadow(color: ColorManager.lightGrey, spreadRadius: AppSize.s0)
-        ]),
-        child: BottomNavigationBar(
-          selectedItemColor: ColorManager.primary,
-          unselectedItemColor: ColorManager.grey,
-          currentIndex: _currentIndex,
-          onTap: onTap,
-          items: [
-            BottomNavigationBarItem(
-                icon: const Icon(Icons.home), label: AppStrings.home.tr()),
-            BottomNavigationBarItem(
-                icon: const Icon(Icons.search), label: AppStrings.search.tr()),
-            BottomNavigationBarItem(
-                icon: const Icon(Icons.notifications),
-                label: AppStrings.notification.tr()),
-            BottomNavigationBarItem(
-                icon: const Icon(Icons.settings),
-                label: AppStrings.setting.tr()),
-          ],
+      bottomNavigationBar: Theme(
+        data: ThemeData(
+          splashColor: Colors.transparent,
+          highlightColor: Colors.transparent,
+        ),
+        child: Container(
+          decoration: BoxDecoration(boxShadow: [
+            BoxShadow(color: ColorManager.lightGrey, spreadRadius: AppSize.s0)
+          ]),
+          child: BottomNavigationBar(
+            unselectedFontSize: 14.0,
+            type: BottomNavigationBarType.fixed,
+            showUnselectedLabels: true,
+            selectedItemColor: ColorManager.primary,
+            unselectedItemColor: ColorManager.grey,
+            currentIndex: _currentIndex,
+            onTap: onTap,
+            items: [
+              BottomNavigationBarItem(
+                  icon: const Icon(Icons.home), label: AppStrings.home.tr()),
+              BottomNavigationBarItem(
+                  icon: const Icon(Icons.search),
+                  label: AppStrings.search.tr()),
+              BottomNavigationBarItem(
+                  icon: const Icon(Icons.notifications),
+                  label: AppStrings.notification.tr()),
+              BottomNavigationBarItem(
+                  icon: const Icon(Icons.settings),
+                  label: AppStrings.setting.tr()),
+            ],
+          ),
         ),
       ),
     );

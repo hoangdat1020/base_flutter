@@ -1,6 +1,8 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_flavor/feature/resources/strings_manager.dart';
+import 'package:flutter/cupertino.dart';
+import 'dart:io';
+
+import 'package:flutter_application_flavor/common/functions.dart';
 
 class SearchPage extends StatefulWidget {
   const SearchPage({super.key});
@@ -15,10 +17,46 @@ class _SearchPageState extends State<SearchPage> {
     return Scaffold(
       body: Center(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(AppStrings.search.tr()),
+            const Text('DEMO SingleChildScrollView'),
+            Expanded(
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    Container(
+                      height: 40,
+                      color: Colors.red,
+                    ),
+                    Container(
+                      height: 40,
+                      color: Colors.green,
+                    ),
+                    Container(
+                      height: 40,
+                      color: Colors.blue,
+                    ),
+                    Container(
+                      height: 40,
+                      color: Colors.amberAccent,
+                    )
+                  ],
+                ),
+              ),
+            ),
+            TextButton(
+              child: const Text('ALERT DIALOG'),
+              onPressed: () {
+                /// FOR ANDROID
+                if (!Platform.isAndroid) {
+                  androidDialog(context);
+                }
+
+                /// FOR IOS
+                else if (!Platform.isIOS) {
+                  iOSDialog(context);
+                }
+              },
+            ),
           ],
         ),
       ),
