@@ -1,5 +1,4 @@
-BASE FLUTTER 
-
+BASE FLUTTER
 
 1 - Flutter config
 
@@ -11,3 +10,6 @@ https://viblo.asia/p/flutter-lam-viec-voi-nhieu-moi-truong-khac-nhau-trong-du-an
 
 https://pub.dev/packages/easy_localization
 
+3- LeftHook - check preCommit
+
+https://blog.devgenius.io/easy-git-hooks-for-flutter-f2927cbbcfd4
